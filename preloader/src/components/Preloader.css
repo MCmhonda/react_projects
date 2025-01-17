@@ -1,0 +1,61 @@
+.preloader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #091057;
+  z-index: 9999;
+}
+
+.loader-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pillar {
+  position: absolute;
+  width: 20px;
+  height: 0;
+  background: #DBD3D3;
+  animation: grow-pillar 3s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+.pillar1 {
+  transform: rotate(0deg) translateY(-60px);
+  animation-delay: 0s;
+}
+
+.pillar2 {
+  transform: rotate(90deg) translateY(-60px);
+  animation-delay: 0.25s;
+}
+
+.pillar3 {
+  transform: rotate(180deg) translateY(-60px);
+  animation-delay: 0.5s;
+}
+
+.pillar4 {
+  transform: rotate(270deg) translateY(-60px);
+  animation-delay: 0.75s;
+}
+
+@keyframes grow-pillar {
+  0%, 100% {
+    height: 0;
+    background: #DBD3D3;
+  }
+  50% {
+    height: 120px;
+    background: #024CAA;
+  }
+} 
